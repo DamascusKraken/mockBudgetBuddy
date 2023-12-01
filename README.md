@@ -1,1 +1,1 @@
-# mockBudgetBuddy
+# Budget-Buddy

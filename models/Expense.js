@@ -11,6 +11,28 @@ Expense.init(
             primaryKey: true, 
             autoIncrement: true,
         },
-        
+        amount: {
+            type: DataTypes.DECIMAL,
+        },
+        category_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'category',
+                key: 'id'
+            }
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            }
+        },
+    },
+    {
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'expense',
     }
-)
+);

@@ -1,31 +1,26 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Expense extends Model {}
+class Total extends Model {}
 
-Expense.init(
+Total.inti(
     {
         id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true, 
+            primaryKey: true,
             autoIncrement: true,
         },
-        amount: {
+        budget_amt: {
             type: DataTypes.DECIMAL,
         },
-        category_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'category',
-                key: 'id'
-            }
+        remainder_amt: {
+            type: DataTypes.DECIMAL
         },
         user_email: {
             type: DataTypes.STRING,
             references: {
                 model: 'user',
-                key: 'email',
+                key: 'email'
             }
         },
     },
@@ -33,6 +28,6 @@ Expense.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'expense',
+        modelName: 'total'
     }
 );

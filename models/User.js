@@ -13,7 +13,6 @@ User.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
     },
     name: {
@@ -24,6 +23,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+      primaryKey: true,
       validate: {
         isEmail: true,
       },

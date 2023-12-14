@@ -18,7 +18,7 @@
     >
       <div class="row  mt-3">
         <label class="col-6 col-sm-6">Enter Monthly Budget:</label>
-        <input class="col-6 col-sm-4 text-end" placeholder="0000.00" />
+        <input class="col-6 col-sm-4 bg-light border border-light text-end" placeholder="0000.00" />
 
         
         <div class="w-100 d-none d-md-block mb-2 pb-2">
@@ -35,57 +35,60 @@
     
       
 
-<div class="col-12" id="botLeftColumn">
+{{!-- <div class="col-12" id="botLeftColumn">
   <h6 class="row justify-content-center text-center">
     <u>Enter Monthly Expenses</u> 
   </h6>
-  {{!-- <aside class="displayBlock text-center  fs-5"> --}}
-    {{!-- <div class="row mt-4">
-      <label class="col-5">
-        Housing:
-      </label>
-      <input class="col-5 fs-6 col-sm-4 text-end" placeholder="0000.00" />
-    </div>
-    <div class="row mt-2">
-      <label class="col-5 ">
-        Gas:
-      </label>
-      <input class="col-5 fs-6 col-sm-4 text-end" placeholder="0000.00" />
-    </div>
-    <div class="row mt-2">
-      <label class="col-5">
-        Food:
-      </label>
-      <input class="col-5 fs-6 col-sm-4 text-end" placeholder="0000.00" />
-    </div>
-    <div class="row mt-2">
-      <label class="col-5">
-        Misc:
-      </label>
-      <input class="col-5 fs-6 col-sm-4 text-end" placeholder="0000.00" />
-    </div> --}}
-
+  
  <aside class="displayBlock text-center  fs-5"> 
      <div class="row mt-4">
-      <select id="myCategory" class="col-4 m-3">
+      <select id="myCategory" class="col-4  m-3 ms-4 ">
         <option>Housing</option>
         <option>Gas</option>
         <option>Food</option>
         <option>Misc.</option>
       </select>
-      <input class="col-5 fs-6 col-sm-4 text-end m-3" placeholder="0000.00" />
+      <input class="col-5 fs-6 col-sm-3 text-end m-3" placeholder="0000.00" />
     </div>
     
     <form class="text-center">
       
       <button
       type="button"
-      class="col-4 col-sm-2 offset-md-3 btn btn-primary mb-3"
+      class="col-4 col-sm-2 offset-md-6 btn btn-primary mb-3"
     >Submit</button>
    </aside> 
     
     </form>
-  </div>
+  </div> --}}
+
+  <h6
+      class="row justify-content-center text-underline text-center"
+    ><u>Monthly Budget</u></h6>
+
+    <form
+      id="budgetForm"
+      class="col-12  bg-light p-3  my-3"
+    >
+      <div class="row  mt-3">
+        <select class="col-6 col-sm-5 m-2">
+          <option>Housing</option>
+          <option>Gas</option>
+          <option>Food</option>
+          <option>Misc.</option>
+        </select>
+        <input class="col-6 col-sm-4 bg-light border border-light offset-md-1 text-end" placeholder="0000.00" />
+
+        
+        <div class="w-100 d-none d-md-block mb-2 pb-2">
+
+          <button
+            type="button"
+            class="col-4 col-sm-2 offset-md-8 mt-3 btn btn-primary"
+          >Submit</button>
+        </div>
+      </div>
+    </form>
     
   
   </div>

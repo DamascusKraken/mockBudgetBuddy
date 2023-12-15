@@ -16,11 +16,11 @@ Total.inti(
         remainder_amt: {
             type: DataTypes.DECIMAL
         },
-        user_email: {
+        user_id: {
             type: DataTypes.STRING,
             references: {
                 model: 'user',
-                key: 'email'
+                key: 'id'
             }
         },
     },

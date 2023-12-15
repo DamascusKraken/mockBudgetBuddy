@@ -21,11 +21,11 @@ Expense.init(
                 key: 'id'
             }
         },
-        user_email: {
+        user_id: {
             type: DataTypes.STRING,
             references: {
                 model: 'user',
-                key: 'email',
+                key: 'id',
             }
         },
     },
@@ -36,3 +36,5 @@ Expense.init(
         modelName: 'expense',
     }
 );
+
+module.exports = Expense;
